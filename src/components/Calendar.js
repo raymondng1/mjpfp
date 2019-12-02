@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Table } from 'reactstrap';
 import axios from 'axios';
-import './App.css';
+
 class Calendar extends React.Component {
 	constructor() {
 		super();
@@ -23,7 +23,7 @@ class Calendar extends React.Component {
 
 		console.log('render', data);
 		return (
-			<div>
+			<div className="calendar-container">
                     
 					{data.map(data => (
 						<div className="block">

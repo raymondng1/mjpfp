@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {
-	Collapse,
 	Navbar,
 	NavbarToggler,
 	NavbarBrand,
@@ -18,20 +17,20 @@ import {
 	InputGroup
 } from 'reactstrap';
 
-import Calendar from './Calendar';
+import CalendarTitle from './components/CalendarTitle'
+import Calendar from './components/Calendar';
+import ClickButtons from './components/ClickButtons'; 
+import AddTask from './components/AddTask';
+
 const App = () => {
 	return (
 		<Container fluid className='centered'>
-			<Navbar dark color='dark'>
-				<NavbarBrand href='/'> Calendar </NavbarBrand>
-			</Navbar>
-			<div>
-				<Button variant='primary'> Previous </Button>
-				<Button variant='primary'> Next</Button>
-			</div>
+			<CalendarTitle/>
+			<ClickButtons/>
 			<div>
 				<Calendar />
 			</div>
+			<AddTask/>
 		</Container>
 	);
 };
